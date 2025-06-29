@@ -1,4 +1,14 @@
-// Modified by Animality AI, 2025-06-29
+
+<div align="center">
+
+```
+ █████╗ ███╗   ██╗██╗███╗   ███╗ █████╗ ██╗     ██╗████████╗██╗   ██╗     █████╗ ██╗
+██╔══██╗████╗  ██║██║████╗ ████║██╔══██╗██║     ██║╚══██╔══╝╚██╗ ██╔╝    ██╔══██╗██║
+███████║██╔██╗ ██║██║██╔████╔██║███████║██║     ██║   ██║    ╚████╔╝     ███████║██║
+██╔══██║██║╚██╗██║██║██║╚██╔╝██║██╔══██║██║     ██║   ██║     ╚██╔╝      ██╔══██║██║
+██║  ██║██║ ╚████║██║██║ ╚═╝ ██║██║  ██║███████╗██║   ██║      ██║    ██╗██║  ██║██║
+╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝╚═╝   ╚═╝      ╚═╝    ╚═╝╚═╝  ╚═╝╚═╝
+```// Modified by Animality AI, 2025-06-29
 # animality.ai CLI
 
 This CLI is an Apache-2.0 derivative of Google's Gemini CLI. LICENSE & NOTICE preserved.
@@ -16,16 +26,19 @@ With the animality.ai CLI you can:
 - Ground your queries with the [Google Search](https://ai.google.dev/gemini-api/docs/grounding)
   tool, built in to the AI model.
 
-## Quickstart
 
-1. **Prerequisites:** Ensure you have [Node.js version 18](https://nodejs.org/en/download) or higher installed.
-2. **Run the CLI:** Execute the following command in your terminal:
+</div>
+
+---
+
 
    ```bash
    npx @animality/cli
    ```
 
-   Or install it with:
+
+The Gemini CLI is your **intelligent development assistant** that bridges the gap between natural language and code execution. Think of it as having a senior developer who understands your entire codebase, can read your mind, and executes complex tasks with surgical precision.
+
 
    ```bash
    npm install -g @animality/cli
@@ -37,24 +50,37 @@ With the animality.ai CLI you can:
 
 You are now ready to use the animality.ai CLI!
 
-### For advanced use or increased limits:
 
-If you need to use a specific model or require a higher request capacity, you can use an API key:
+---
 
-1. Generate a key from [Google AI Studio](https://aistudio.google.com/apikey).
-2. Set it as an environment variable in your terminal. Replace `YOUR_API_KEY` with your generated key.
+### 🔑 Advanced Authentication
 
+Need higher limits or specific models? Use an API key:
+
+1. **Generate key**: Visit [Google AI Studio](https://aistudio.google.com/apikey)
+2. **Set environment variable**:
    ```bash
-   export ANIMALITY_API_KEY="YOUR_API_KEY"
+
+   export GEMINI_API_KEY="your_key_here"
+
    ```
+3. **Enterprise setup**: See [authentication guide](./docs/cli/authentication.md) for Google Workspace accounts
 
-For other authentication methods, including Google Workspace accounts, see the [authentication](./docs/cli/authentication.md) guide.
+## 📚 Examples
 
-## Examples
 
 Once the CLI is running, you can start interacting with AI from your shell.
 
-You can start a project from a new directory:
+
+### 🆕 Starting Fresh
+```bash
+mkdir my-awesome-project && cd my-awesome-project
+gemini
+```
+```text
+> Write me a Discord bot that answers questions using a FAQ.md file I will provide
+```
+
 
 ```sh
 cd new-project/
@@ -62,74 +88,276 @@ animality-cli
 > Write me a Discord bot that answers questions using a FAQ.md file I will provide
 ```
 
-Or work with an existing project:
+### 🚀 Real-World Examples
+
 
 ```sh
 git clone https://github.com/animality-ai/cli
 cd cli
 animality-cli
 > Give me a summary of all of the changes that went in yesterday
+
+</details>
+
+<details>
+<summary><b>🛠️ Feature Development</b></summary>
+
+```text
+> Implement a first draft for GitHub issue #123
+
+> Help me migrate this codebase to the latest version of Java. Start with a plan
+
+> Add TypeScript support to this project with proper configuration
 ```
+</details>
 
-### Next steps
+<details>
+<summary><b>🤖 Automation & Workflows</b></summary>
 
-- Learn how to [contribute to or build from the source](./CONTRIBUTING.md).
-- Explore the available **[CLI Commands](./docs/cli/commands.md)**.
-- If you encounter any issues, review the **[Troubleshooting guide](./docs/troubleshooting.md)**.
-- For more comprehensive documentation, see the [full documentation](./docs/index.md).
-- Take a look at some [popular tasks](#popular-tasks) for more inspiration.
+```text
+> Make me a slide deck showing the git history from the last 7 days, grouped by feature
 
-### Troubleshooting
+> Create a full-screen web app for displaying our most active GitHub issues
 
-Head over to the [troubleshooting](docs/troubleshooting.md) guide if you're
-having issues.
+> Set up a CI/CD pipeline that deploys to staging on every PR
+```
+</details>
 
-## Popular tasks
-
-### Explore a new codebase
 
 Start by `cd`ing into an existing or newly-cloned repository and running `animality-cli`.
 
+
 ```text
-> Describe the main pieces of this system's architecture.
+> Convert all images in this directory to PNG and rename them using EXIF dates
+
+> Organize my PDF invoices by month of expenditure
+
+> Clean up this messy JavaScript project and add proper linting
+```
+</details>
+
+---
+
+### 📖 Next Steps
+
+| Resource | Description |
+|----------|-------------|
+| [🚀 CLI Commands](./docs/cli/commands.md) | Master all available commands |
+| [🔧 Troubleshooting](./docs/troubleshooting.md) | Solve common issues quickly |
+| [📚 Full Documentation](./docs/index.md) | Comprehensive guides |
+| [🤝 Contributing](./CONTRIBUTING.md) | Help improve Gemini CLI |
+| [💡 Popular Tasks](#-popular-use-cases) | Get inspired with real examples |
+
+## 🌟 Popular Use Cases
+
+### 🕵️ Code Exploration & Understanding
+*Perfect for new team members or exploring unfamiliar codebases*
+
+```bash
+cd any-project && gemini
 ```
 
+<table>
+<tr>
+<td width="50%">
+
+**🔍 Architecture Deep Dive**
+```text
+> Describe the main pieces of this 
+  system's architecture
+
+> What are the key design patterns used?
+
+> Show me the data flow from API 
+  to database
+```
+
+</td>
+<td width="50%">
+
+**🔒 Security & Quality Review**
 ```text
 > What security mechanisms are in place?
+
+> Find potential vulnerabilities in 
+  this authentication code
+
+> Review this code for performance 
+  bottlenecks
 ```
 
-### Work with your existing code
+</td>
+</tr>
+</table>
 
+### 🚀 Development & Feature Building
+*From idea to implementation in minutes*
+
+<table>
+<tr>
+<td width="50%">
+
+**⚡ Rapid Prototyping**
 ```text
-> Implement a first draft for GitHub issue #123.
+> Implement a first draft for 
+  GitHub issue #123
+
+> Create a REST API for user 
+  management with authentication
+
+> Build a React component for 
+  file uploads with progress bars
 ```
 
+</td>
+<td width="50%">
+
+**🔄 Migration & Modernization**
 ```text
-> Help me migrate this codebase to the latest version of Java. Start with a plan.
+> Migrate this codebase to 
+  TypeScript with proper types
+
+> Upgrade this React app from 
+  class components to hooks
+
+> Convert these REST endpoints 
+  to GraphQL
 ```
 
-### Automate your workflows
+</td>
+</tr>
+</table>
 
-Use MCP servers to integrate your local system tools with your enterprise collaboration suite.
+### 🤖 Automation & DevOps
+*Let AI handle the repetitive tasks*
 
+<table>
+<tr>
+<td width="50%">
+
+**📊 Reporting & Analytics**
 ```text
-> Make me a slide deck showing the git history from the last 7 days, grouped by feature and team member.
+> Create a dashboard showing git 
+  activity by team member
+
+> Generate a performance report 
+  from these log files
+
+> Build a monitoring dashboard 
+  for system health
 ```
 
+</td>
+<td width="50%">
+
+**🔧 Infrastructure & CI/CD**
 ```text
-> Make a full-screen web app for a wall display to show our most interacted-with GitHub issues.
+> Set up GitHub Actions for 
+  automated testing and deployment
+
+> Create Docker configuration 
+  for this application
+
+> Build a monitoring script for 
+  server uptime
 ```
 
-### Interact with your system
+</td>
+</tr>
+</table>
 
+### 🗂️ File & Data Management
+*Organize and transform your data intelligently*
+
+<table>
+<tr>
+<td width="50%">
+
+**🖼️ Media Processing**
 ```text
-> Convert all the images in this directory to png, and rename them to use dates from the exif data.
+> Convert all images to WebP format 
+  and optimize for web
+
+> Extract metadata from all photos 
+  and organize by date
+
+> Resize images for different 
+  device breakpoints
 ```
 
+</td>
+<td width="50%">
+
+**📄 Document Management**
 ```text
-> Organise my PDF invoices by month of expenditure.
+> Organize PDF invoices by 
+  month and vendor
+
+> Extract data from CSV files 
+  and create summary reports
+
+> Convert markdown docs to 
+  structured JSON
 ```
 
-## Terms of Service and Privacy Notice
+</td>
+</tr>
+</table>
 
-For details on the terms of service and privacy notice applicable to your use of animality.ai CLI, see the [Terms of Service and Privacy Notice](./docs/tos-privacy.md).
+---
+
+> 💡 **The key to success**: Be specific about what you want, provide context, and don't be afraid to iterate!
+
+---
+
+## 📋 Additional Resources
+
+<div align="center">
+
+### 🤝 Community & Support
+
+[![GitHub Issues](https://img.shields.io/github/issues/google-gemini/gemini-cli.svg)](https://github.com/google-gemini/gemini-cli/issues)
+[![GitHub Stars](https://img.shields.io/github/stars/google-gemini/gemini-cli.svg)](https://github.com/google-gemini/gemini-cli/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/google-gemini/gemini-cli.svg)](https://github.com/google-gemini/gemini-cli/network)
+
+[💬 Discussions](https://github.com/google-gemini/gemini-cli/discussions) • [🐛 Report Bug](https://github.com/google-gemini/gemini-cli/issues/new) • [💡 Request Feature](https://github.com/google-gemini/gemini-cli/issues/new)
+
+</div>
+
+### 📚 Learning Resources
+
+| Resource | Description |
+|----------|-------------|
+| [🎓 Tutorials](./docs/cli/tutorials.md) | Step-by-step guides for common tasks |
+| [⚙️ Configuration](./docs/cli/configuration.md) | Customize Gemini CLI to your workflow |
+| [🎨 Themes](./docs/cli/themes.md) | Beautiful color schemes for your terminal |
+| [🔧 Advanced Features](./docs/cli/commands.md) | Power user commands and options |
+
+### 🔗 Integrations
+
+| Integration | Description |
+|-------------|-------------|
+| [🔌 MCP Servers](./docs/tools/mcp-server.md) | Connect external tools and services |
+| [🌐 Web Search](./docs/tools/web-search.md) | Real-time information with Google Search |
+| [📁 File System](./docs/tools/file-system.md) | Advanced file and directory operations |
+| [💾 Memory](./docs/tools/memory.md) | Persistent context across sessions |
+
+---
+
+## ⚖️ Terms of Service and Privacy Notice
+
+
+For details on the terms of service and privacy notice applicable to your use of Gemini CLI, see the [Terms of Service and Privacy Notice](./docs/tos-privacy.md).
+
+---
+
+<div align="center">
+
+**Made with ❤️ by the Google Gemini team Modified with ☕️ by the Animality.ai Team**
+
+*Transforming the way developers build, one command at a time.*
+
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+
+</div>
+
