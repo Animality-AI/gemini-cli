@@ -1,8 +1,3 @@
-# 🚀 Animality.AI Code Buddy
-
-[![Gemini CLI CI](https://github.com/google-gemini/gemini-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/google-gemini/gemini-cli/actions/workflows/ci.yml)
-[![npm version](https://badge.fury.io/js/%40google%2Fgemini-cli.svg)](https://badge.fury.io/js/%40google%2Fgemini-cli)
-[![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org/)
 
 <div align="center">
 
@@ -13,64 +8,48 @@
 ██╔══██║██║╚██╗██║██║██║╚██╔╝██║██╔══██║██║     ██║   ██║     ╚██╔╝      ██╔══██║██║
 ██║  ██║██║ ╚████║██║██║ ╚═╝ ██║██║  ██║███████╗██║   ██║      ██║    ██╗██║  ██║██║
 ╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝╚═╝   ╚═╝      ╚═╝    ╚═╝╚═╝  ╚═╝╚═╝
-```
+```// Modified by Animality AI, 2025-06-29
+# animality.ai CLI
 
-**Your AI-powered command-line companion that transforms how you build, explore, and automate.**
+This CLI is an Apache-2.0 derivative of Google's Gemini CLI. LICENSE & NOTICE preserved.
 
-[🎯 Quick Start](#-quick-start) • [📚 Examples](#-examples) • [🛠️ Features](#-what-you-can-do) • [📖 Docs](./docs/index.md) • [🚨 Issues](https://github.com/google-gemini/gemini-cli/issues)
+This repository contains the animality.ai CLI, a command-line AI workflow tool that connects to your
+tools, understands your code and accelerates your workflows.
+
+With the animality.ai CLI you can:
+
+- Query and edit large codebases in and beyond the AI model's 1M token context window.
+- Generate new apps from PDFs or sketches, using multimodal AI capabilities.
+- Automate operational tasks, like querying pull requests or handling complex rebases.
+- Use tools and MCP servers to connect new capabilities, including [media generation with Imagen,
+  Veo or Lyria](https://github.com/GoogleCloudPlatform/vertex-ai-creative-studio/tree/main/experiments/mcp-genmedia)
+- Ground your queries with the [Google Search](https://ai.google.dev/gemini-api/docs/grounding)
+  tool, built in to the AI model.
+
 
 </div>
 
 ---
 
-## 🎯 What is Gemini CLI?
+
+   ```bash
+   npx @animality/cli
+   ```
+
 
 The Gemini CLI is your **intelligent development assistant** that bridges the gap between natural language and code execution. Think of it as having a senior developer who understands your entire codebase, can read your mind, and executes complex tasks with surgical precision.
 
-### ✨ What You Can Do
 
-🔍 **Code Intelligence**
-- Query and refactor massive codebases beyond Gemini's 1M token context window
-- Get architectural insights and security analysis instantly
-- Navigate complex systems with natural language queries
+   ```bash
+   npm install -g @animality/cli
+   animality-cli
+   ```
 
-🎨 **Creative Generation**  
-- Transform PDFs, sketches, or ideas into full applications using multimodal AI
-- Generate everything from Discord bots to enterprise dashboards
-- Convert mockups to production-ready code
+3. **Pick a color theme**
+4. **Authenticate:** When prompted, sign in with your personal Google account. This will grant you up to 60 model requests per minute and 1,000 model requests per day using the AI model.
 
-⚡ **Workflow Automation**
-- Automate complex git operations, PR reviews, and deployments  
-- Connect with [MCP servers](https://modelcontextprotocol.io/) for unlimited tool integration
-- Build custom workflows that understand your development patterns
+You are now ready to use the animality.ai CLI!
 
-🌐 **Enhanced Capabilities**
-- [Media generation with Imagen, Veo & Lyria](https://github.com/GoogleCloudPlatform/vertex-ai-creative-studio/tree/main/experiments/mcp-genmedia)
-- Built-in [Google Search grounding](https://ai.google.dev/gemini-api/docs/grounding) for real-time information
-- Seamless integration with your existing development tools
-
-## 🚀 Quick Start
-
-> **Prerequisites**: Node.js ≥18.0.0 ([Download here](https://nodejs.org/en/download))
-
-### Option 1: Instant Run (Recommended)
-```bash
-npx https://github.com/google-gemini/gemini-cli
-```
-
-### Option 2: Global Install
-```bash
-npm install -g @google/gemini-cli
-gemini
-```
-
-### 🎨 First Launch Setup
-1. **Choose your theme** - Pick from beautiful color schemes
-2. **Authenticate** - Sign in with your Google account
-   - ✅ **Free tier**: 60 requests/minute, 1,000 requests/day
-   - 🚀 **No setup required** - Just your Google account!
-
-**That's it!** You're ready to start building with AI.
 
 ---
 
@@ -81,13 +60,17 @@ Need higher limits or specific models? Use an API key:
 1. **Generate key**: Visit [Google AI Studio](https://aistudio.google.com/apikey)
 2. **Set environment variable**:
    ```bash
+
    export GEMINI_API_KEY="your_key_here"
+
    ```
 3. **Enterprise setup**: See [authentication guide](./docs/cli/authentication.md) for Google Workspace accounts
 
 ## 📚 Examples
 
-> 💡 **Pro tip**: The magic happens when you combine natural language with your development context!
+
+Once the CLI is running, you can start interacting with AI from your shell.
+
 
 ### 🆕 Starting Fresh
 ```bash
@@ -98,27 +81,22 @@ gemini
 > Write me a Discord bot that answers questions using a FAQ.md file I will provide
 ```
 
-### 🔍 Exploring Existing Code
-```bash
-git clone https://github.com/google-gemini/gemini-cli && cd gemini-cli
-gemini
-```
-```text
-> Give me a summary of all the changes that went in yesterday
+
+```sh
+cd new-project/
+animality-cli
+> Write me a Discord bot that answers questions using a FAQ.md file I will provide
 ```
 
 ### 🚀 Real-World Examples
 
-<details>
-<summary><b>🏗️ Architecture & Code Review</b></summary>
 
-```text
-> Describe the main pieces of this system's architecture
+```sh
+git clone https://github.com/animality-ai/cli
+cd cli
+animality-cli
+> Give me a summary of all of the changes that went in yesterday
 
-> What security mechanisms are in place?
-
-> Review this PR for potential issues and suggest improvements
-```
 </details>
 
 <details>
@@ -145,8 +123,9 @@ gemini
 ```
 </details>
 
-<details>
-<summary><b>📁 File & System Operations</b></summary>
+
+Start by `cd`ing into an existing or newly-cloned repository and running `animality-cli`.
+
 
 ```text
 > Convert all images in this directory to PNG and rename them using EXIF dates
@@ -367,16 +346,18 @@ cd any-project && gemini
 
 ## ⚖️ Terms of Service and Privacy Notice
 
+
 For details on the terms of service and privacy notice applicable to your use of Gemini CLI, see the [Terms of Service and Privacy Notice](./docs/tos-privacy.md).
 
 ---
 
 <div align="center">
 
-**Made with ❤️ by the Google Gemini team**
+**Made with ❤️ by the Google Gemini team Modified with ☕️ by the Animality.ai Team**
 
 *Transforming the way developers build, one command at a time.*
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
 </div>
+

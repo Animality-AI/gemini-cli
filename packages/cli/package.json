@@ -1,4 +1,5 @@
 {
+  "_modified_by": "Animality AI, 2025-06-29",
   "name": "@google/gemini-cli",
   "version": "0.1.8",
   "description": "Gemini CLI",
@@ -6,7 +7,7 @@
   "type": "module",
   "main": "dist/index.js",
   "bin": {
-    "gemini": "dist/index.js"
+    "animality-cli": "dist/index.js"
   },
   "scripts": {
     "build": "node ../../scripts/build_package.js",

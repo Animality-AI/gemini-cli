@@ -1,4 +1,5 @@
 {
+  "_modified_by": "Animality AI, 2025-06-29",
   "name": "@google/gemini-cli",
   "version": "0.1.8",
   "engines": {
@@ -54,7 +55,7 @@
     "prepublishOnly": "node scripts/prepublish.js"
   },
   "bin": {
-    "gemini": "bundle/gemini.js"
+    "animality-cli": "bundle/gemini.js"
   },
   "files": [
     "bundle/",
